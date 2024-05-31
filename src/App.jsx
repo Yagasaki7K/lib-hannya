@@ -2,6 +2,7 @@
 import styled from 'styled-components'
 import Button from './components/Button'
 import Avatar from './components/Avatar'
+import Breadcrumb from './components/Breadcrumb'
 
 function App() {
 	return (
@@ -27,6 +28,10 @@ function App() {
 				</p>
 
 				<p>
+					Read the comments on code if have, because some stuffs need a third-party libs.
+				</p>
+
+				<p>
 					Created and maintained by <a href="https://github.com/Yagasaki7K" target='_blank' rel="noreferrer">Anderson "Yagasaki" Marlon</a> and
 					your <a href="https://github.com/Yagasaki7K/lib-hannya/graphs/contributors" target='_blank' rel="noreferrer">contributors</a>.
 				</p>
@@ -36,11 +41,14 @@ function App() {
 				<div className="examples">
 					<h2>Examples</h2>
 
-					<h4>Button</h4>
+					<h3>Avatar</h3>
+					<Avatar />
+
+					<h3>Button</h3>
 					<Button />
 
-					<h4>Avatar</h4>
-					<Avatar />
+					<h3>Breadcrumb</h3>
+					<Breadcrumb />
 				</div>
 
 				<CopyrightDetails>
