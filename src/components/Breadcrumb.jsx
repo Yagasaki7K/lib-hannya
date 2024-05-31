@@ -8,13 +8,13 @@ const Breadcrumb = () => {
     return (
         <BreadcrumbDetails>
             <div className="navigation">
-                <p>Home</p>
+                <a href="#">Home</a>
                 <i className="uil uil-angle-right" />
                 <p className="dots">...</p>
                 <i className="uil uil-angle-right" />
-                <p>Components</p>
+                <a href="#">Components</a>
                 <i className="uil uil-angle-right" />
-                <p className="lastList">Breadcrumb</p>
+                <a href="#" className="lastList">Breadcrumb</a>
             </div>
         </BreadcrumbDetails>
     )
@@ -32,14 +32,16 @@ const BreadcrumbDetails = styled.div`
         justify-content: center;
         align-items: center;
         color: #464950;
+        padding: 1rem 0;
+        font-family: inherit;
         
         i {
             margin: 0 0.5rem;
         }
 
         .dots {
-            margin-top: 8px;
-            color: #acb2c9;
+            margin-top: -10px;
+            cursor: pointer;
 
             &:hover {
                 color: #acb2c9;
@@ -50,7 +52,10 @@ const BreadcrumbDetails = styled.div`
             color: #fff;
         }
 
-        p {
+        a {
+            text-decoration: none;
+            transition: 0.2s;
+            
             &:hover {
                 color: #fff;
             }

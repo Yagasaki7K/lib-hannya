@@ -3,52 +3,56 @@ import styled from 'styled-components'
 import Button from './components/Button'
 import Avatar from './components/Avatar'
 import Breadcrumb from './components/Breadcrumb'
+import Card from './components/Card'
 
 function App() {
 	return (
 		<HomeDetails>
 			<div className="overlay"></div>
-			<div className="content">
+			<div className="container">
 				<h1 className="logo">👹</h1>
-				<h1>Welcome to Hannya</h1>
+				<h1 className="content">Welcome to Hannya</h1>
 
-				<p>
+				<p className="content">
 					What's Hannya? A beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
 				</p>
-				<p>
+				<p className="content">
 					To understand how to use Hannya, you just need a <code>styled-components</code> installed, but, if you
 					doesn't use him, you can import a css from every components and customize from own way.
 				</p>
 
-				<h2>Installation</h2>
+				<h2 className="content">Installation</h2>
 
-				<p>
+				<p className="content">
 					If you have a <code>styled-components</code> installed, go to <code>/src/components</code>, copy
 					the example do you want and put in your components folder. You can customize him whatever you want.
 				</p>
 
-				<p>
+				<p className="content">
 					Read the comments on code if have, because some stuffs need a third-party libs.
 				</p>
 
-				<p>
+				<p className="content">
 					Created and maintained by <a href="https://github.com/Yagasaki7K" target='_blank' rel="noreferrer">Anderson "Yagasaki" Marlon</a> and
 					your <a href="https://github.com/Yagasaki7K/lib-hannya/graphs/contributors" target='_blank' rel="noreferrer">contributors</a>.
 				</p>
 
-				<p>You can see the <a href="https://github.com/Yagasaki7K/lib-hannya" target='_blank' rel="noreferrer">source code</a> here.</p>
+				<p className="content">You can see the <a href="https://github.com/Yagasaki7K/lib-hannya" target='_blank' rel="noreferrer">source code</a> here.</p>
 
 				<div className="examples">
-					<h2>Examples</h2>
+					<h2 className="content">Examples</h2>
 
-					<h3>Avatar</h3>
+					<h3 className="content">Avatar</h3>
 					<Avatar />
 
-					<h3>Button</h3>
+					<h3 className="content">Button</h3>
 					<Button />
 
-					<h3>Breadcrumb</h3>
+					<h3 className="content">Breadcrumb</h3>
 					<Breadcrumb />
+
+					<h3 className="content">Card</h3>
+					<Card />
 				</div>
 
 				<CopyrightDetails>
@@ -82,15 +86,15 @@ const HomeDetails = styled.div`
 		border-radius: 5px;
 	}
 
-	.content {
+	.container {
 		font-family: 'Inter', sans-serif;
-		color: var(--font-light);
 
-		h1, h2, h3, h4, p {
+		.content {
 			margin: 1rem 0;
+			color: var(--font-light);
 		}
 
-		p {
+		p .content {
 			color: var(--font);
 			text-align: left;
 		}
@@ -115,10 +119,6 @@ const CopyrightDetails = styled.div`
     text-align: center;
     flex-direction: column;
     margin: 2rem;
-
-    .inter {
-        font-family: 'Inter', sans-serif;
-    }
 
 	.copyright {
 		a {
