@@ -4,6 +4,7 @@ import Button from './components/Button'
 import Avatar from './components/Avatar'
 import Breadcrumb from './components/Breadcrumb'
 import Card from './components/Card'
+import Checkbox from './components/Checkbox'
 
 function App() {
 	return (
@@ -53,6 +54,9 @@ function App() {
 
 					<h3 className="content">Card</h3>
 					<Card />
+
+					<h3 className="content">Checkbox</h3>
+					<Checkbox />
 				</div>
 
 				<CopyrightDetails>
@@ -140,7 +144,9 @@ const CopyrightDetails = styled.div`
         width: 35rem;
         margin: 0 0 1rem 0;
         border: 1px solid var(--border);
-      }
+    }
 
-    
+	p {
+		color: var(--font);
+	}
 `
