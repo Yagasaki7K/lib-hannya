@@ -10,8 +10,30 @@ function App() {
 	return (
 		<HomeDetails>
 			<div className="overlay"></div>
+			<div className="ball"></div>
+			<div
+				className="ball"
+				style={
+					{
+						"--delay": "-12s",
+						"--size": "0.35",
+						"--speed": "25s",
+					}
+				}
+			></div>
+
+			<div
+				className="ball"
+				style={
+					{
+						"--delay": "-10s",
+						"--size": "0.3",
+						"--speed": "15s",
+					}
+				}
+			></div>
 			<div className="container">
-				<h1 className="logo">👹</h1>
+				<img src="https://images.emojiterra.com/google/android-12l/512px/1f479.png" alt="HannyaUI" />
 				<h1 className="content">Welcome to Hannya</h1>
 
 				<p className="content">
@@ -80,8 +102,8 @@ const HomeDetails = styled.div`
 	text-align: center;
 	padding: 2rem 35rem;
 
-	.logo {
-		font-size: 10rem;
+	img {
+		width: 10rem;
 	}
 
 	code {
